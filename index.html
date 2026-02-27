@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KodNest Premium Build System</title>
+    <link rel="stylesheet" href="design-system.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="top-bar__project-name">KodNest Build System</div>
+            <div class="top-bar__progress">Step 3 / 8</div>
+            <div class="top-bar__status status--in-progress">In Progress</div>
+        </header>
+
+        <!-- Context Header -->
+        <section class="context-header">
+            <h1 class="context-header__headline">Design System Implementation</h1>
+            <p class="context-header__subtext">Establishing the foundational design language and component library for consistent, premium user experiences across all KodNest products.</p>
+        </section>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+            <!-- Primary Workspace (70%) -->
+            <main class="primary-workspace">
+                <div class="card">
+                    <div class="card__header">
+                        <h2 class="card__title">Component Library</h2>
+                        <p class="card__subtitle">Core UI components following design system principles</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="serif-h3 mb-3">Buttons</h3>
+                        <div class="flex flex-gap-3 flex-wrap">
+                            <button class="btn btn--primary">Primary Action</button>
+                            <button class="btn btn--secondary">Secondary</button>
+                            <button class="btn btn--success">Success</button>
+                            <button class="btn btn--warning">Warning</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <h3 class="serif-h3 mb-3">Form Elements</h3>
+                        <div class="mb-3">
+                            <input type="text" class="input-field" placeholder="Enter your project name">
+                        </div>
+                        <div>
+                            <textarea class="textarea-field" placeholder="Describe your build requirements..."></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="serif-h3 mb-3">Cards</h3>
+                        <div class="card">
+                            <div class="card__header">
+                                <h4 class="card__title">Build Configuration</h4>
+                                <p class="card__subtitle">Customize your build settings</p>
+                            </div>
+                            <p class="body-text">Configure deployment targets, environment variables, and build optimizations according to your project requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Error State Example -->
+                <div class="error-state">
+                    <h3 class="error-state__title">Build Failed</h3>
+                    <p class="error-state__message">The deployment process encountered an unexpected error. This typically occurs when environment variables are misconfigured or dependencies are missing.</p>
+                    <button class="btn btn--primary btn--small">Retry Build</button>
+                    <button class="btn btn--secondary btn--small ml-2">View Logs</button>
+                </div>
+
+                <!-- Empty State Example -->
+                <div class="empty-state">
+                    <h3 class="empty-state__title">No Builds Yet</h3>
+                    <p class="empty-state__message">You haven't created any builds. Start by configuring your project settings and defining your first build pipeline.</p>
+                    <button class="btn btn--primary">Create First Build</button>
+                </div>
+            </main>
+
+            <!-- Secondary Panel (30%) -->
+            <aside class="secondary-panel">
+                <div class="secondary-panel__section">
+                    <h3 class="secondary-panel__title">Current Step</h3>
+                    <p class="secondary-panel__description">Implementing the core design system components and establishing visual consistency across the platform.</p>
+                </div>
+
+                <div class="secondary-panel__section">
+                    <h3 class="secondary-panel__title">Prompt</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-box__content">Create a design system that embodies calm confidence through intentional whitespace, consistent typography, and restrained color usage. Focus on readability and professional aesthetics.</div>
+                        <div class="prompt-box__actions">
+                            <button class="btn btn--secondary btn--small">Copy</button>
+                            <button class="btn btn--primary btn--small">Build in Lovable</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="secondary-panel__section">
+                    <h3 class="secondary-panel__title">Actions</h3>
+                    <div class="flex flex-column flex-gap-2">
+                        <button class="btn btn--primary btn--block">It Worked</button>
+                        <button class="btn btn--secondary btn--block">Report Error</button>
+                        <button class="btn btn--secondary btn--block">Add Screenshot</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Proof Footer -->
+        <footer class="proof-footer">
+            <div class="proof-checklist">
+                <div class="proof-item">
+                    <div class="proof-checkbox" onclick="toggleCheckbox(this)"></div>
+                    <span>UI Built</span>
+                    <input type="text" class="proof-input" placeholder="Commit hash">
+                </div>
+                <div class="proof-item">
+                    <div class="proof-checkbox" onclick="toggleCheckbox(this)"></div>
+                    <span>Logic Working</span>
+                    <input type="text" class="proof-input" placeholder="Test results">
+                </div>
+                <div class="proof-item">
+                    <div class="proof-checkbox" onclick="toggleCheckbox(this)"></div>
+                    <span>Test Passed</span>
+                    <input type="text" class="proof-input" placeholder="Test coverage %">
+                </div>
+                <div class="proof-item">
+                    <div class="proof-checkbox" onclick="toggleCheckbox(this)"></div>
+                    <span>Deployed</span>
+                    <input type="text" class="proof-input" placeholder="Environment">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleCheckbox(element) {
+            element.classList.toggle('checked');
+        }
+    </script>
+</body>
+</html>
